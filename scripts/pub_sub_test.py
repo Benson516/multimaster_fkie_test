@@ -21,7 +21,7 @@ def chatter_CB(msg):
 def main():
     pub = rospy.Publisher('/chatter', String, queue_size=10)
     #
-    rospy.init_node('cross_compulter_chatter', anonymous=False)
+    rospy.init_node('cross_computer_chatter', anonymous=True)
     # Subscribers
     rospy.Subscriber("/chatter", String, chatter_CB)
     #
