@@ -28,7 +28,8 @@
 
     <!-- The list of nodes to synchronize. Only topics of this nodes are synchronized. The ~ignore_nodes, ~ignore_topics and ~ignore_services lists are processed first. -->
     <!-- For example, ['/docking_navigation'] -->
-    <rosparam param="sync_nodes">[]</rosparam>
+    <!-- Empty node name. Not sync.ing service at all -->
+    <rosparam param="sync_nodes">[""]</rosparam>
 
     <!-- The list of topics, which are to be ignored while a synchroniation. The ~ignore_nodes list is processed first.
     These are defaults and cannot be removed: ['/rosout', '/rosout_agg'] -->
@@ -45,7 +46,8 @@
     <rosparam param="ignore_services">[]</rosparam>
 
     <!-- The list of services to synchronize. The ~ignore_nodes and ~ignore_services lists are processed first. -->
-    <rosparam param="sync_services">[]</rosparam>
+    <!-- Empty service name. Not sync.ing service at all -->
+    <rosparam param="sync_services">[""]</rosparam>
 
     <!-- This parameter is only regarded, if sync_nodes or sync_topics are set. In this case the subscribed and published topics are synchronized even if they are not in the sync_* list -->
     <param name="sync_topics_on_demand" value="False" />
