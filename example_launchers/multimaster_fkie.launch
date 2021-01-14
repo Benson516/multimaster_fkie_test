@@ -1,4 +1,4 @@
 <launch>
-    <include file="./master_discovery.launch"/>
-    <include file="./master_sync.launch"/>
+    <include file="$(find multimaster_fkie_test)/example_launchers/master_discovery.launch"/>
+    <include file="$(find multimaster_fkie_test)/example_launchers/master_sync.launch"/>
 </launch>

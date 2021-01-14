@@ -33,10 +33,9 @@
     <!-- The list of topics, which are to be ignored while a synchroniation. The ~ignore_nodes list is processed first.
     These are defaults and cannot be removed: ['/rosout', '/rosout_agg'] -->
     <rosparam param="ignore_topics">['/tf', '/tf_static']</rosparam>
-    <!--
+    
     <rosparam param="ignore_publishers">[]</rosparam>
     <rosparam param="ignore_subscribers">[]</rosparam>
-    -->
 
     <!-- The list of topics to synchronize. The ~ignore_nodes and ~ignore_topics lists are processed first. -->
     <rosparam param="sync_topics">[]</rosparam>
@@ -58,6 +57,8 @@
     <!-- The nodes which are running not at the same host as the ROS master are not synchronized by default. Use sync_remote_nodes to sync these nodes also. -->
     <param name="sync_remote_nodes" value="False" />
 
+    <!-- checks for eqaul hostname of topic provider and master uri. Usefull on warning "Wait for topic with type..." still if master_discovery is running. -->
+    <param name="check_host" value="True" />
 
 
   </node>
